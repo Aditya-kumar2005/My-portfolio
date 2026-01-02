@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Kumar | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+        <nav>
+       <div class="logo">AK</div>
+        <div class="nav-links">
+        <a href="#home"><label class="links">Home</label></a>
+        <a href="#about"><label class="links">About</label></a>
+        <a href="#skills"><label class="links">Skills</label></a>
+        <a href="#projects"><label class="links">Projects</label></a>
+        <a href="#contact"><label class="links">Contact</label></a>
+        </div>
+    </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="name">Aditya Kumar</div>
+            <h2 class="tagline">Run your company with ease</h2>
+            <p>Let Stipple Unlimited hook you up with stress-free HR and payroll systems.</p>
+             <div class="btn-main">About Me</div>
+        </div>
+        <div class="hero-image">
+            <div class="blob">
+                <img src="img.jpg" alt="">
+            </div>
+         </div>
+    </section>
+    <section id="about" class="dark-section">
+        <div class="container">
+            <div class="img-wrapper">
+                <div class="img-box"><img src="Java1.webp" alt="" srcset=""></div>
+            </div>
+            <div class="about-flex">
+                <div class="head-name">About Me</div>
+                <div class="about-text">
+                    <p>I am a passionate <strong>Java developer</strong> gaining experience in creating robust applications. My expertise lies in building scalable and efficient software solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="dark-section">
+        <div class="container">
+            <div class="head-name">Skills</div>
+            <div class="skills-grid">
+                <div class="skill-card">Spring Framework</div>
+                <div class="skill-card">Maven Build Tool</div>
+                <div class="skill-card">Vs-code</div>
+                <div class="skill-card">Apache-netbeans</div>
+                <div class="skill-card">Eclipse-IDE</div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="dark-section">
+        <div class="container">
+            <span class="head-name">Projects</span>
+            <span>
+                <div class="image-wrapper">
+                    <img src="img1.png" alt="profile image" class="profile">
+                    <img src="img3.png" alt="profile image" class="profile">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img4.png" alt="profile image" class="profile">
+                    <img src="img5.png" alt="profile image" class="profile">
+                </div>
+
+            </span>
+            
+        </div>
+    </section>
+    <section id="contact" class="dark-section">
+    <div class="container">
+        <div class="head-name">Get in Touch</div>
+        <span>
+            <div class="phone">Phone number</div>
+            <div>+919369248808</div>
+        </span>
+        <span>
+            <div class="email">Email id</div>
+            <div>aditya.kumar250605@gmail.com</div>
+        </span>
+        <span>
+            <div class="linkedin">Linkedin</div>
+            <div></div>
+        </span>
+    </div>
+    <div class="feedback-card">
+        <h3>Rate your experience</h3>
+        <div class="stars">
+            <span onclick="rate(1)">☆</span>
+            <span onclick="rate(2)">☆</span>
+            <span onclick="rate(3)">☆</span>
+            <span onclick="rate(4)">☆</span>
+            <span onclick="rate(5)">☆</span>
+        </div>
+        <button class="btn-submit">Submit Feedback</button>
+        <!-- Display rating here -->
+        <p id="rating-display"></p>
+    </div>
+</section>
+    <script src="script.js"></script>
+    </body>
+</html>
