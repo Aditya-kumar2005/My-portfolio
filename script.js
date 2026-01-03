@@ -1,18 +1,51 @@
-// Function to scroll to different pages
+/* ================= Smooth Scroll ================= */
 function goTo(id) {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    const section = document.getElementById(id);
+    if (!section) return;
+
+    section.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
 }
 
-// Simple star rating logic
+/* ================= Star Rating ================= */
 function rate(star) {
-    // Display the rating on screen
-    document.getElementById("rating-display").innerText = "You rated: " + star + " star(s)";
+    const display = document.getElementById("rating-display");
+    if (!display) return;
+
+    display.textContent = `You rated: ${star} star${star > 1 ? "s" : ""}`;
 }
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
 
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
+/* ================= Mobile Navbar ================= */
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    const navItems = navLinks?.querySelectorAll("a");
+
+    if (!menuToggle || !navLinks) return;
+
+    // Toggle mobile menu
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+        menuToggle.classList.toggle("active");
+    });
+
+    // Close menu when clicking a link (mobile UX)
+    navItems?.forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("show");
+            menuToggle.classList.remove("active");
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove("show");
+            menuToggle.classList.remove("active");
+        }
+    });
+
+    console.log("✅ Aditya's Portfolio loaded successfully!");
 });
-
-console.log("Aditya's Portfolio is ready to go!");
