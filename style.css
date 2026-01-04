@@ -126,6 +126,17 @@ nav {
     background: var(--primary-blue);
     color: #fff;
 }
+.image{
+    width: 40px;
+    cursor: pointer;
+    display: inline;
+    margin-inline: 25px;
+    transition: transform 0.3s ease;
+}
+.image :hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(7, 73, 139, 0.584);
+}
 
 /* ================= HERO IMAGE ================= */
 .hero-image {
